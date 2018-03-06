@@ -41,7 +41,7 @@ class Books {
 
   static updateBooks(req,res,next){
     let target = {
-      id:req.params.id
+      _id:req.params._id
     }
     let objUpdate = {
       isbn:req.body.isbn,

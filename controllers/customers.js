@@ -42,7 +42,7 @@ class Customers {
 
   static updateCustomers(req,res,next){
     let target = {
-      id:req.params.id
+      _id:req.params._id
     }
     let objUpdate = { $set:{
       name:req.body.name,

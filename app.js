@@ -9,6 +9,7 @@ const mongoose = require('mongoose')
 var index = require('./routes/index');
 var books = require('./routes/books');
 var customers = require('./routes/customers')
+var transactions = require('./routes/transactions')
 
 var app = express();
 mongoose.connect('mongodb://localhost/library')
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/books', books);
 app.use('/customers', customers)
+app.use('/transactions',transactions)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
